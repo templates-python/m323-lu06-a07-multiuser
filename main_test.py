@@ -20,6 +20,7 @@ class TestTodoAPI(unittest.TestCase):
         assert json.loads(response.data)['success'] == True
 
     def test_get_all_todos(self):
+        self.login('admin', 'admin')
         response = self.client.get('/todos')
         assert response.status_code == 200
         assert type(json.loads(response.data)) is list

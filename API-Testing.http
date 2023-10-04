@@ -7,6 +7,15 @@ Content-Type: application/json
     "password": "admin"
 }
 
+### Login
+POST http://127.0.0.1:5000/login
+Content-Type: application/json
+
+{
+    "username": "user",
+    "password": "user"
+}
+
 ### Logout
 GET http://127.0.0.1:5000/logout
 
