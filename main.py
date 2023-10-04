@@ -34,13 +34,14 @@ def generate_testdata():
     # Generate user
     user_dao.create_user_table()
     user_dao.add_user(User(1, 'admin', 'admin@example', 'admin'))
+    user_dao.add_user(User(2, 'user', 'user@example', 'user'))
 
     # Generate todo items
     todo_dao.create_table()
-    todo_dao.add_item(TodoItem(1, 'Buy milk', False))
-    todo_dao.add_item(TodoItem(2, 'Buy eggs', False))
-    todo_dao.add_item(TodoItem(3, 'Buy bread', False))
-    todo_dao.add_item(TodoItem(4, 'Buy butter', False))
+    todo_dao.add_item(TodoItem(1,1, 'Buy milk', False))
+    todo_dao.add_item(TodoItem(2,1, 'Buy eggs', False))
+    todo_dao.add_item(TodoItem(3,2, 'Buy bread', False))
+    todo_dao.add_item(TodoItem(4,2, 'Buy butter', False))
 
     todo_dao.close()
     user_dao.close()
