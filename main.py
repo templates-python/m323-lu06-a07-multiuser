@@ -1,3 +1,8 @@
+"""Multiuser Todo-Liste.
+
+Aufgabenstellung: https://wiki.bzz.ch/modul/m323/learningunits/lu06/aufgaben/multiuser
+"""
+
 from flask import Flask
 from flask_login import LoginManager
 
